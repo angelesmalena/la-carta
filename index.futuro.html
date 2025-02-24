@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    PROYECTO N1
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>el futuro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #fde2e4; /* Fondo rosa pastel */
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+            background-image: radial-gradient(circle at center, rgba(255, 0, 0, 0.3) 10%, transparent 10%),
+                              radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.3) 10%, transparent 10%);
+            background-size: 40px 40px; /* Tamaño del patrón */
+            background-position: 0 0, 20px 20px; /* Espaciado entre los corazones */
+            overflow-y: auto; /* Permitirá el desplazamiento vertical */
+            max-width: 100%; /* Para asegurarnos de que ocupe toda la pantalla */
+            align-items: center; /* Centra los elementos en el eje horizontal */
+        }
+        .carta {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 800px;
+            border: 5px solid #f4c2c2;
+            position: relative;
+            overflow: hidden; /* Asegurarse de que el contenido no se desborde */
+            margin-bottom: 40px; /* Mayor espacio entre las cartas */
+        }
+        .carta::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 25px;
+            border: 3px solid gold;
+            animation: brillo 2s infinite alternate;
+        }
+        @keyframes brillo {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        h1 {
+            font-size: 3em;
+            color: #d63384;
+        }
+        p {
+            font-size: 2em;
+            color: #b80f47;
+            margin: 20px 0;
+        }
+        .firma {
+            font-size: 1.8em;
+            margin-top: 20px;
+            color: #ff4d6d;
+        }
+        .corazon {
+            font-size: 2.5em;
+            animation: latir 1.5s infinite ease-in-out;
+            color: red;
+        }
+        @keyframes latir {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .dedicatoria {
+            font-style: italic; /* Letra cursiva */
+            font-size: 1.8em;
+            color: #b80f47;
+            margin-top: 30px;
+        }
+        .imagen {
+            width: 80%; /* Ajuste del tamaño de la imagen */
+            max-width: 600px; /* Tamaño máximo de la imagen */
+            height: auto; /* Mantener la proporción de la imagen */
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px; /* Espaciado debajo de la imagen */
+        }
